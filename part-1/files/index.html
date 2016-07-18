@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css"/>
 </head>
 <body ng-app="app">
 
@@ -12,7 +12,12 @@
     <h1>Angular App</h1>
 
     <div ng-controller="MainController">
-        <p>{{text}}</p>
+        <input type="text" ng-model="text">
+        <p ng-bind="text"></p>
+        <div class="btn btn-primary" ng-click="addName()">Add Name</div>
+        <hr>
+
+        <p ng-bind="names"></p>
     </div>
 </div>
 
@@ -25,6 +30,11 @@
 
     app.controller('MainController', function ($scope) {
         $scope.text = "Hello World";
+        $scope.names = [];
+
+        $scope.addName = function () {
+            $scope.names.push($scope.text);
+        };
     });
 </script>
 
