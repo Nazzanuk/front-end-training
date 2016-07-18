@@ -12,12 +12,30 @@
     <h1>Angular App</h1>
 
     <div ng-controller="MainController">
-        <input type="text" ng-model="text">
-        <p ng-bind="text"></p>
-        <div class="btn btn-primary" ng-click="addName()">Add Name</div>
+        <div class="row">
+            <div class="col-sm-3">
+                <p><label>Text</label></p>
+                <input type="text" ng-model="text">
+                <p ng-bind="text"></p>
+            </div>
+            <div class="col-sm-3">
+                <p><label>Image</label></p>
+                <input type="text" ng-model="image" ng-init="image = 'http://www.vassit.co.uk/public_files/VASSIT-Logo1.png'">
+                <img ng-show="image" ng-src="{{image}}" style="max-width: 200px;max-height: 200px">
+            </div>
+        </div>
+        <div>
+            <div class="btn btn-primary" ng-click="addUser()">Add User</div>
+        </div>
+
         <hr>
 
-        <p ng-repeat="name in names track by $index">{{name}}</p>
+        <h3>Users</h3>
+
+        <div class="col-sm-3" ng-repeat="user in users track by $index">
+            <p ng-bind="user.text"></p>
+            <img ng-show="user.image" ng-src="{{user.image}}" style="max-width: 200px;max-height: 200px">
+        </div>
     </div>
 </div>
 
@@ -30,10 +48,11 @@
 
     app.controller('MainController', function ($scope) {
         $scope.text = "Hello World";
-        $scope.names = [];
+        $scope.image = "";
+        $scope.users = [];
 
-        $scope.addName = function () {
-            $scope.names.push($scope.text);
+        $scope.addUser = function () {
+            $scope.users.push({text:$scope.text, image:$scope.image});
         };
     });
 </script>
