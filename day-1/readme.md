@@ -1,6 +1,4 @@
-# Day 1 - Angular
-
-## Part 1 - 
+# Part 1 - Starting with Angular
 
 ### First we are going to create a blank HTML file:
 
