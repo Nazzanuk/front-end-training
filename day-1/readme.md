@@ -20,8 +20,10 @@ First we are going to create a blank HTML file:
 #### Include Angular
 `https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.min.js`
 
-### Include Bootstrap
+#### Include Bootstrap
 `https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css`
 `https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js`
 
-### Add Angular tag
+#### Add Angular tag to body
+
+`ng-app="app"`html
