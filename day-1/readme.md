@@ -24,6 +24,9 @@ First we are going to create a blank HTML file:
 `https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css`
 `https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js`
 
-#### Add Angular tag to body
+#### Add Angular app attribute to `<body>` element
+`ng-app="app"`
 
-`ng-app="app"`html
+This attribute assigns Angular functionality to everything contained within.
+
+#### 
