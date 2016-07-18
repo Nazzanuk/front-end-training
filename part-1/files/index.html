@@ -17,7 +17,7 @@
         <div class="btn btn-primary" ng-click="addName()">Add Name</div>
         <hr>
 
-        <p ng-bind="names"></p>
+        <p ng-repeat="name in names track by $index">{{name}}</p>
     </div>
 </div>
 
