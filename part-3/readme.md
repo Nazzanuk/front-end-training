@@ -1,5 +1,6 @@
 # Part 3 - Ajax and $http
-
+---
+## 1.
 ### Start again with an empty controller fot the HTML and JavaScript.
 
 ```html
@@ -23,7 +24,9 @@ app.controller('MainController', function ($scope) {
 Each Pokemon will need to contain data for `name`, `imageUrl`, `height`, `weight` and `attack`
 
 ### Create an `ng-repeat` in your HTML which will loop through and display each Pokémon
+---
 
+## 2.
 ### Inject `$http` into your controller
 
 `app.controller('MainController', function ($scope, $http) {`
