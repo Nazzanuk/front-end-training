@@ -33,5 +33,5 @@ Each Pokemon will need to contain data for `name`, `imageUrl`, `height`, `weight
 
 We can use `$http` for all ajax requests.
 
-### Using `$http.get` make a request to
+### Using `$http.get` make a request to `http://pokeapi.co/api/v2/pokemon/1/` and then push the repsonse to your array
 
