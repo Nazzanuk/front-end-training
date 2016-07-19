@@ -45,7 +45,7 @@ We use `track by $index` to prevent Angular throwing errors with duplicate value
         </div>
         <div class="col-sm-3">
             <p><label>Image</label></p>
-            <input type="text" ng-model="image" ng-init="image = 'http://www.vassit.co.uk/public_files/VASSIT-Logo1.png'">
+            <input type="text" ng-model="image" ng-init="image = 'https://unsplash.it/800/800/?random'">
             <img ng-show="image" ng-src="{{image}}" style="max-width: 200px;max-height: 200px">
         </div>
     </div>
