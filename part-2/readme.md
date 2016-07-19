@@ -1,5 +1,6 @@
 # Part 2 - Angular binding
-
+---
+## 1.
 ### Alternative way to bind
 
 ```html
@@ -9,7 +10,6 @@
 
 ### Add an input element in your controller with attribute `ng-model="text"`
 The content of the input text and the output in the `p` tag should now always be the same.
-
 
 ### Add an array to the scope called `names`
 
@@ -30,9 +30,11 @@ The content of the input text and the output in the `p` tag should now always be
 We can now see the `ng-repeat` attribute which allows us to iterate over an array or object.
 We use `track by $index` to prevent Angular throwing errors with duplicate values. 
 `$index` tells us the current index of the array.
-
+---
+## 2.
 ### Change the HTML so that we see the name printed along with the index e.g. `0. Hello World`, `1. Hello World` etc.
-
+---
+## 3.
 ### Replace your controller HTML with the following:
 
 ```html
@@ -64,7 +66,8 @@ We use `track by $index` to prevent Angular throwing errors with duplicate value
 
 We have made a lot of changes here and *this will break your code*. We can implicitly declare a variable on the `$scope` using `ng-init`.
 We can see how dynamic the binding is by instantly showing an image based on the value of the image input.
-
+---
+## 4.
 ### Change your code so that each time `Add User` is clicked, we generate a new user for our `ng-repeat`.
 
 
