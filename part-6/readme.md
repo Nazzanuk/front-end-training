@@ -30,6 +30,7 @@ app.controller('MainController', function ($scope) {
 ### Create a folder called `components` and place a new file in there called `main-controller.js`
 ```javascript
 //main-controller.js
+
 var app = angular.module('app', []);
 
 app.controller('MainController', function ($scope) {
@@ -50,13 +51,14 @@ app.controller('MainController', function ($scope) {
 //main-controller.js
 var app = angular.module('app', []);
 
-app.service('MainService', function ($scope, MainService) {
+app.controller('MainController', function ($scope, MainService) {
     $scope.getHello = MainService.getHello;
 });
 
 ```javascript
 //main-service.js
-app.service('MainService', function ($scope) {
+
+app.service('MainService', function () {
     var hello = "Hello World";
     
     var getHello = function () {
