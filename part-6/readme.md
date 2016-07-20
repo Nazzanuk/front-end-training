@@ -101,7 +101,7 @@ gulp.task('default', function() {
 });
 ```
 
-### Run gulpin your terminal:
+### Run `gulp` in your terminal:
 
 ```bash
 gulp

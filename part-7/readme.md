@@ -24,9 +24,5 @@ bower install --save angular bootstrap jquery
 ### In the `bower_components` folder we will finda folder for each dependency
 ---
 ## 2.
-### Create two Gulp tasks `gen-lib-js` and `gen-lib-css` you will need to find the specific files for 
-each and generate `lib.js` and `lib.css` respectively.
+### Create two Gulp tasks `gen-lib-js` and `gen-lib-css` you will need to find the specific files for each and generate `lib.js` and `lib.css` respectively.
 
-
----
-## 3.
