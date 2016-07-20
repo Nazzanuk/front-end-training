@@ -15,7 +15,7 @@
                     <div class="panel-heading">Mrs Laurie Cole</div>
                     <img src="https://randomuser.me/api/portraits/women/78.jpg" style="width: 100%">
                     <div class="panel-body">
-                        <p><strong>Email:</strong> laurie.cole@example.com</p>
+                        <p style="white-space: nowrap;overflow: hidden"><strong>Email:</strong> laurie.cole@example.com</p>
                         <p><strong>DOB:</strong> 1078494582</p>
                         <p><strong>Phone:</strong> (179)-102-8139</p>
                         <hr>
@@ -49,3 +49,6 @@ app.controller('MainController', function ($scope) {
 ---
 ## 4.
 ### Using `$http` make a button that triggers an ajax call to `https://randomuser.me/api/?123` (number at the end should be random) and adds each result to your array
+---
+## 5.
+### Make the delete button work - this will likely involve passing an attribute by reference
