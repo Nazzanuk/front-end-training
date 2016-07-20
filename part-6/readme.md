@@ -142,5 +142,5 @@ gulp.task('gen-js', function() {
 ### run `gulp gen-js` via the terminal
 
 ```bash
-npm install --save gulp-concat
+gulp gen-js
 ```
