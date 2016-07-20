@@ -79,3 +79,4 @@ app.component('imgItem', {
 ### Use `ng-repeat` to duplicate the `<img-item>` as many times as is necessary
 ---
 ## 4.
+### Create a function that will generate a random number between 1-99 every time a button is clicked, and add it to the array
