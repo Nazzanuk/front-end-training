@@ -79,9 +79,10 @@ It's good practice to put all business logic in services*
 ### Change your HTML to show the output from the service
 ---
 ## 4.
-*NOTE: As we add more and more files, scaling this becomes a problem. So we will use a task runner to automate this process*
+*NOTE: As we add more and more files, scaling becomes a problem. So we will use a task runner to automate this process*
  
-### In your terminal at the root of your directory run 
+### We are going to use Node Package Manager(npm) to download libraries for our project
+### In your terminal, at the root of your directory run 
 
 ```bash
 npm install --global gulp-cli # Install Gulp globally
@@ -100,9 +101,11 @@ gulp.task('default', function() {
 });
 ```
 
-### Run gulp:
+### Run gulpin your terminal:
 
-`gulp`
+```bash
+gulp
+```
 
 The default task will run and do nothing.
 
@@ -110,4 +113,32 @@ To run individual tasks, use `gulp <task>`.
 
 ---
 ## 5.
-### 
+### We are going to install `gulp-concat` to concatenate all of our files into one.
+
+### Install `gulp-concat` via the terminal
+
+```bash
+npm install --save gulp-concat
+```
+
+### Add this declaration to the top of the gulpfile
+```javascript
+var concat = require('gulp-concat'); 
+```
+
+### Add the task `gen-js` to your gulpfile
+
+```javascript
+gulp.task('gen-js', function() {
+    return gulp.src('./components/**/*.js') //wildcard
+        .pipe(concat('app.js'));
+});
+```
+
+*NOTE: This task uses a wildcard to fin all of the js files in the components directory and then*
+
+### run `gulp gen-js` via the terminal
+
+```bash
+npm install --save gulp-concat
+```
