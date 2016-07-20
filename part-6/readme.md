@@ -54,6 +54,7 @@ var app = angular.module('app', []);
 app.controller('MainController', function ($scope, MainService) {
     $scope.getHello = MainService.getHello;
 });
+```
 
 ```javascript
 //main-service.js
