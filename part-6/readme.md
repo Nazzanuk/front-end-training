@@ -189,10 +189,41 @@ gulp.task('gen-js', function() {
         .pipe(gulp.dest('./public/'));
 });
 ```
+### Replace your code in js code with these:
 
-### Run `gulp gen-js` via the terminal
+```javascript
+//main-service.js
 
-```bash
-gulp gen-js
+app.service('MainService', () => { //implicit function
+    var hello = "Hello World";
+
+    var getHello = () => hello; //implicit function
+
+    return {
+        getHello //implicit 
+    };
+
+});
 ```
+
+```javascript
+//main-controller.js
+
+var app = angular.module('app', []);
+
+app.controller('MainController', ($scope, MainService) => { //implicit function
+    $scope.getHello = MainService.getHello;
+});
+```
+
+### Check that your app still works
+---
+## 8.
+### Create a new task in your gulpfile `gen-css`
+This task will:
+1. Find a file called `global.scss` and match all other `*.scss` files in the `components` directory.
+1. Concatenate them into one file
+1. Run SASS on them to compile the syntax from `scss` to `css`
+1. Minify the file
+1. Save it to `public/app.css`
 
