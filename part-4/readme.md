@@ -1,6 +1,8 @@
 # Part 4 - Directives
 ---
 1. hi
+1. me
+1. f
 ### Start again with an the following HTML and empty JavaScript.
 
 ```html
@@ -36,6 +38,7 @@ app.controller('MainController', function ($scope) {
 ### Open your browser and check the output
 ---
 1. hello
+
 ### Now we are going to create an `<img-item>` directive to create this automatically 
 ### change your HTML to have the following directive declaration and template
 ```html
