@@ -36,15 +36,16 @@ app.controller('MainController', function ($scope) {
 
 });
 ```
-
-### Attach an array to the scope that will hold a collection of Users.
+### Open your browser and check the output
 ---
 ## 2.
-### Populate this array with dummy data for a couple users for all the necessary fields shown in the HTML.
-### Use an `ng-repeat` to show a user in the html for each user in yur array
+### Convert the user into a directive
 ---
 ## 3.
-### Convert each user into a directive
+### Attach an array to the scope that will hold a collection of Users.
+### Populate this array with dummy data for a few users using all the necessary fields shown in the HTML.
+### Use an `ng-repeat` to show a each user in the html for each entry in your array
+### Open your browser and check the output
 ---
 ## 4.
-### Convert each user into a directive
+### Using `$http` make a button that triggers an ajax call to `https://randomuser.me/api/?123` (number at the end should be random) and adds each result to your array
