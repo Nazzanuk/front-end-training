@@ -73,13 +73,13 @@ app.service('MainService', function () {
 });
 ```
 
-We've created a service to handle the logic, a service can talk to multiple controllers and directives. 
-It's good practice to put all business logic in services
+*NOTE: We've created a service to handle the logic, a service can talk to multiple controllers and directives. 
+It's good practice to put all business logic in services*
 
 ### Change your HTML to show the output from the service
 ---
 ## 4.
-##### NOTE: As we add more and more files, scaling this becomes a problem. So we will use a task runner to automate this process
+*NOTE: As we add more and more files, scaling this becomes a problem. So we will use a task runner to automate this process*
  
 ### In your terminal at the root of your directory run 
 
