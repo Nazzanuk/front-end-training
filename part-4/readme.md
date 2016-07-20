@@ -1,6 +1,6 @@
 # Part 4 - Directives
 ---
-## 0.
+## 1.
 ### Start again with an the following HTML and empty JavaScript.
 
 ```html
@@ -39,11 +39,11 @@ app.controller('MainController', function ($scope) {
 
 ### Attach an array to the scope that will hold a collection of Users.
 ---
-## 0.
+## 1.
 ### Populate this array with dummy data for a couple users for all the necessary fields shown in the HTML.
 ### Use an `ng-repeat` to show a user in the html for each user in yur array
 ---
-## 3.
+## 1.
 ### Convert each user into a directive
 ---
 ## 3.
