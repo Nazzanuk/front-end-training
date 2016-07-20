@@ -9,22 +9,18 @@
     <hr>
 
     <div ng-controller="MainController">
-        <div class="row">
-            <div class="col-sm-3">
-                <div class="panel panel-default">
-                    <div class="panel-heading">Mrs Laurie Cole</div>
-                    <img src="https://randomuser.me/api/portraits/women/78.jpg" style="width: 100%">
-                    <div class="panel-body">
-                        <p><strong>Email:</strong> laurie.cole@example.com</p>
-                        <p><strong>DOB:</strong> 1078494582</p>
-                        <p><strong>Phone:</strong> (179)-102-8139</p>
-                        <hr>
-                        <div class="btn btn-danger">Delete</div>
-                    </div>
-                </div>
-            </div>
+        <div class="pull-left">
+            <p style="text-align: center">Image <strong>{{img.number}}</strong></p>
+            <img src="https://randomuser.me/api/portraits/women/{{img.number}}.jpg" class="img-thumbnail">
         </div>
-
+        <div class="pull-left">
+            <p style="text-align: center">Image <strong>{{img.number}}</strong></p>
+            <img src="https://randomuser.me/api/portraits/women/{{img.number}}.jpg" class="img-thumbnail">
+        </div>
+        <div class="pull-left">
+            <p style="text-align: center">Image <strong>{{img.number}}</strong></p>
+            <img src="https://randomuser.me/api/portraits/women/{{img.number}}.jpg" class="img-thumbnail">
+        </div>
     </div>
 </div>
 ```
@@ -37,14 +33,45 @@ app.controller('MainController', function ($scope) {
 });
 ```
 
-### Attach an array to the scope that will hold a collection of Users.
+### Open your browser and check the output
 ---
-## 1.
+1.
+### Now we are going to create an `<img-item>` directive to create this automatically 
+### change your HTML to have the following directive declaration and template
+```html
+<div class="container">
+    <h1>Angular App</h1>
+    <hr>
+
+    <div ng-controller="MainController">
+        <img-item number="34"></img-item>
+        <img-item number="45"></img-item>
+        <img-item number="22"></img-item>
+    </div>
+</div>
+
+<script type="text/ng-template" id="img-item.html"> <!-- angular directive template -->
+    <img src="https://randomuser.me/api/portraits/women/{{img.number}}.jpg" class="img-thumbnail">
+</script>
+```
+
+### Add this after the JavaScript declaration for the controller
+```javascript
+app.component('imgItem', {
+    templateUrl: 'img-item.html',
+    bindings: {
+        number: '@'
+    }
+});
+```
+
+---
+1.
 ### Populate this array with dummy data for a couple users for all the necessary fields shown in the HTML.
 ### Use an `ng-repeat` to show a user in the html for each user in yur array
 ---
-## 1.
+## 3.
 ### Convert each user into a directive
 ---
-## 3.
+## 4.
 ### Convert each user into a directive
