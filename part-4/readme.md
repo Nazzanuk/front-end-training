@@ -1,6 +1,6 @@
 # Part 4 - Directives
 ---
-## 1.
+1. hi
 ### Start again with an the following HTML and empty JavaScript.
 
 ```html
@@ -35,7 +35,7 @@ app.controller('MainController', function ($scope) {
 
 ### Open your browser and check the output
 ---
-1.
+1. hello
 ### Now we are going to create an `<img-item>` directive to create this automatically 
 ### change your HTML to have the following directive declaration and template
 ```html
@@ -66,7 +66,6 @@ app.component('imgItem', {
 ```
 
 ---
-1.
 ### Populate this array with dummy data for a couple users for all the necessary fields shown in the HTML.
 ### Use an `ng-repeat` to show a user in the html for each user in yur array
 ---
