@@ -157,14 +157,20 @@ e.g.:*
 
 ```javascript
 gulp.task('gen-js', function() {
-    return gulp.src(['./components/main-service.js', './components/**/*.js']) //wildcard
+    return gulp.src(['./components/main-controller.js', './components/**/*.js']) //wildcard
         .pipe(concat('app.js'))
         .pipe(gulp.dest('./public/'));
 });
 ```
 
+### Now every time you create a new js file it will be automatically included in app.js with `gulp gen-js`
 ---
 ## 6.
+### Modify your HTML to only include `app.js` and none of the files inside the `components` directory
+
+### Check that your app still works
+---
+## 7.
 ### We are going to install `babel` to enable ES6 syntax and speed up our development
 
 ### Install `gulp-babel` and `babel-preset-es2015` as dependencies via the terminal
@@ -177,7 +183,7 @@ npm install --save gulp-babel babel-preset-es2015
 
 ```javascript
 gulp.task('gen-js', function() {
-    return gulp.src('./components/**/*.js') //wildcard
+    return gulp.src(['./components/main-controller.js', './components/**/*.js']) //wildcard
         .pipe(concat('app.js'))
         .pipe(babel({presets: ['es2015']}))
         .pipe(gulp.dest('./public/'));
@@ -189,3 +195,4 @@ gulp.task('gen-js', function() {
 ```bash
 gulp gen-js
 ```
+
