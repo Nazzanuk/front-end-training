@@ -115,11 +115,14 @@ To run individual tasks, use `gulp <task>`.
 ## 5.
 ### We are going to install `gulp-concat` to concatenate all of our files into one.
 
-### Install `gulp-concat` via the terminal
+### Install `gulp-concat` as a dependency via the terminal
 
 ```bash
 npm install --save gulp-concat
 ```
+
+*NOTE: By default, all npm dependencies will appear in the `node_modules` directory.*
+
 
 ### Add this declaration to the top of the gulpfile
 ```javascript
