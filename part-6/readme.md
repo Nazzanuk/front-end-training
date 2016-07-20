@@ -221,9 +221,15 @@ app.controller('MainController', ($scope, MainService) => { //implicit function
 ## 8.
 ### Create a new task in your gulpfile `gen-css`
 This task will:
+
 1. Find a file called `global.scss` and match all other `*.scss` files in the `components` directory.
+
 1. Concatenate them into one file
+
 1. Run SASS on them to compile the syntax from `scss` to `css`
+
 1. Minify the file
+
 1. Save it to `public/app.css`
+
 
