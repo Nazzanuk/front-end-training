@@ -142,7 +142,49 @@ gulp.task('gen-js', function() {
 *NOTE: This task uses a wildcard to find all of the js files in the components directory and then merges them into one file
  (`app.js`) and saves that file in the `public` directory.*
 
-### run `gulp gen-js` via the terminal
+### Run `gulp gen-js` via the terminal
+
+```bash
+gulp gen-js
+```
+
+### You should now have a new file at `public/app.js` that has the contents of both the js files in the components directory.
+
+*NOTE: Gulp concat finds files in a random order, so it is recommended to modify the gulpfile so that it always 
+matches the file with `var app = angular.module('app', []);` first.
+
+e.g.:*
+
+```javascript
+gulp.task('gen-js', function() {
+    return gulp.src(['./components/main-service.js', './components/**/*.js']) //wildcard
+        .pipe(concat('app.js'))
+        .pipe(gulp.dest('./public/'));
+});
+```
+
+---
+## 6.
+### We are going to install `babel` to enable ES6 syntax and speed up our development
+
+### Install `gulp-babel` and `babel-preset-es2015` as dependencies via the terminal
+
+```
+npm install --save gulp-babel babel-preset-es2015
+```
+
+### Modify your `gen-js` task to compile with `babel` - don't forget to `require` `gulp-babel` at the top
+
+```javascript
+gulp.task('gen-js', function() {
+    return gulp.src('./components/**/*.js') //wildcard
+        .pipe(concat('app.js'))
+        .pipe(babel({presets: ['es2015']}))
+        .pipe(gulp.dest('./public/'));
+});
+```
+
+### Run `gulp gen-js` via the terminal
 
 ```bash
 gulp gen-js
