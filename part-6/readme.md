@@ -49,6 +49,7 @@ app.controller('MainController', function ($scope) {
 
 ```javascript
 //main-controller.js
+
 var app = angular.module('app', []);
 
 app.controller('MainController', function ($scope, MainService) {
@@ -71,6 +72,9 @@ app.service('MainService', function () {
     }
 });
 ```
+
+We've created a service to handle the logic, a service can talk to multiple controllers and directives. 
+It's good practice to put all business logic in services
 
 ### Change your HTML to show the output from the service
 ---
