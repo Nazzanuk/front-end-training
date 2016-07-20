@@ -131,11 +131,13 @@ var concat = require('gulp-concat');
 ```javascript
 gulp.task('gen-js', function() {
     return gulp.src('./components/**/*.js') //wildcard
-        .pipe(concat('app.js'));
+        .pipe(concat('app.js'))
+        .pipe(gulp.dest('./public/'));
 });
 ```
 
-*NOTE: This task uses a wildcard to fin all of the js files in the components directory and then*
+*NOTE: This task uses a wildcard to find all of the js files in the components directory and then merges them into one file
+ (`app.js`) and saves that file in the `public` directory.*
 
 ### run `gulp gen-js` via the terminal
 
