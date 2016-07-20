@@ -83,9 +83,11 @@ It's good practice to put all business logic in services*
  
 ### In your terminal at the root of your directory run 
 
-```npm install --global gulp-cli # Install Gulp globally```
-```npm init # Initialize your project directory```
-```npm install --save gulp # Install gulp in your project```
+```bash
+npm install --global gulp-cli # Install Gulp globally
+npm init # Initialize your project directory
+npm install --save gulp # Install gulp in your project
+```
 
 ### Create a `gulpfile.js` at the root of your project:
 
