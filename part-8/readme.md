@@ -1,4 +1,4 @@
-# Part 7 - Project structure
+# Part 8 - Project structure
 ---
 ## 1.
 ### Add a new folder in components called `star-warrior`. 

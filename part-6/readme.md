@@ -198,7 +198,7 @@ app.service('MainService', () => { //implicit function
     var hello = "Hello World";
 
     return {
-        getHello: () => hello; //implicit function
+        getHello: () => hello //implicit function
     };
 });
 ```
