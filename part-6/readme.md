@@ -197,12 +197,9 @@ gulp.task('gen-js', function() {
 app.service('MainService', () => { //implicit function
     var hello = "Hello World";
 
-    var getHello = () => hello; //implicit function
-
     return {
-        getHello //implicit 
+        getHello: () => hello; //implicit function
     };
-
 });
 ```
 
