@@ -100,7 +100,7 @@ Pokemon.find().then(response => {
 ## 4.
 ### Modify `server.js` to: 
 - Show all Pokemon in the database with the GET request,
-- Add a new Pokemon to the database with the PUT request and also return the new list of pokemon
+- Add a new Pokemon to the database with the POST request and also return the new list of pokemon
 
 ---
 ## 5.
