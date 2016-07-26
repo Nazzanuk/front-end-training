@@ -57,9 +57,7 @@ The first thing we want to do is to create a server where browsers can connect t
 var express = require('express');
 var app = express();
 
-app.listen(3000, function() {
-  console.log('listening on 3000');
-});
+app.listen(3000, () => console.log('listening on 3000'));
 ```
 
 ### Now, run `node server.js` and navigate to `localhost:3000` on your browser.
@@ -78,7 +76,7 @@ app.get(path, callback);
 
 ### Let’s write “Hello World” back to the browser.
 ```javascript
-app.get('/', function(req, res) { //req = request, res = response
+app.get('/', (req, res) => { //req = request, res = response
   res.send('Hello World');
 });
 ```
@@ -124,5 +122,49 @@ The changes should be picked up automagically.
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
   // Note: __dirname is the path to your current working directory
+});
+```
+
+___
+## 6.
+### Create an array that will hold a list of Pokemon
+
+### Add some dummy data, each pokemon needs a field for `name` and `cp (number)` 
+
+### Create a GET request for route `/pokemon` so that this array will be printed when we navigate to `localhost:3000/pokemon`
+
+---
+## 7.
+We are going to add a route for a POST request.
+
+```javascript
+app.post('/pokemon', (req, res) => {
+    //do something
+});
+```
+
+Express doesn’t handle reading data from the body of a request on it’s own. We have to add another package called body-parser to gain this functionality.
+
+### Install the body parser
+```bash
+npm install body-parser --save
+```
+
+### Add the body parser dependency
+```javascript
+//server.js
+
+var express = require('express');
+var bodyParser= require('body-parser');
+var app = express();
+
+app.use(bodyParser.urlencoded({extended: true}));
+```
+
+### Modify the POST request
+
+```javascript
+app.post('/pokemon', (req, res) => {
+    res.json(req.body);
 });
 ```
