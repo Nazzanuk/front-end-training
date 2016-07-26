@@ -4,6 +4,8 @@
 ### Create a new file `server.js`. 
 
 ```javascript
+//server.js
+
 console.log('May Node be with you');
 
 ```
@@ -29,7 +31,7 @@ npm install express --save
   "description": "",
   "main": "server.js",
   "dependencies": {
-    "express": "^4.14.0"
+    "express": "^4.14.0" //dependency
   },
   "devDependencies": {},
   "scripts": {
@@ -42,7 +44,20 @@ npm install express --save
 
 ```
 
+---
+## 2.
+### Next, we use express in server.js by requiring it.
+
+The first thing we want to do is to create a server where browsers can connect to. We can do so with the help of a `listen` method provided by Express:
 
 
+```javascript
+//server.jsvar express = require('express');
+var app = express();
+
+app.listen(3000, function() {
+  console.log('listening on 3000')
+})
 
 
+### Now, run `node server.js` and navigate to `localhost:3000` on your browser. You should see a message that says “cannot get /“.
