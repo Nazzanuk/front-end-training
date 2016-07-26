@@ -13,13 +13,6 @@ db.on('error', console.error.bind(console, 'connection error:'));
 
 db.once('open', () => {
     console.log("we're connected!");
-
-    //var pikachu = new Pokemon({ name: 'Pikachu' });
-    //console.log(pikachu.cp); // 0
-
-    //Pokemon.find().then(response => {
-    //    console.log('Pokemon Array: ', response);
-    //}, console.error);
 });
 
 app.use(bodyParser.urlencoded({extended: true}));
@@ -46,6 +39,4 @@ app.post('/pokemon', (req, res) => {
                 res.json(response);
             });
         }, console.error);
-
-
 });

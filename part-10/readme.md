@@ -89,7 +89,7 @@ pikachu.save().then(pikachu => {
 }, console.error);
 ```
 
-### We want to display all the pokemon we have in our db. We can access all of the documents through our Pokemon model.
+### We want to display all the Pokemon we have in our db. We can access all of the documents through our Pokemon model.
 ```javascript
 Pokemon.find().then(response => {
   console.log('Pokemon Array: ', response);
@@ -99,5 +99,29 @@ Pokemon.find().then(response => {
 ---
 ## 4.
 ### Modify `server.js` to: 
-- show all pokemon in the database with the GET request,
-- add a new pokemon to the database with the PUT request and also return the new list of pokemon
+- Show all Pokemon in the database with the GET request,
+- Add a new Pokemon to the database with the PUT request and also return the new list of pokemon
+
+---
+## 5.
+### You can pass arguments into the `find` function to filter the returned results.
+
+```
+Users.find({ age: 23 }); //will return an array with all users with `age`, `23`.
+```
+
+### In express we can get route parameters, simply specify the route parameters in the path of the route as shown below.
+```
+app.get('/users/:userId/books/:bookId', function(req, res) {
+  res.send(req.params);
+});
+```
+```
+//for this example
+Route path: /users/:userId/books/:bookId
+Request URL: http://localhost:3000/users/34/books/8989
+req.params: { "userId": "34", "bookId": "8989" }
+```
+
+### Modify `server.js` to: 
+- Show the Pokemon with the name passed in with the GET request `/pokemon/name/:name`. for example `/pokemon/name/Pikachu` shoulw return an array with all Pokemon named Pikachu
