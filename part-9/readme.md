@@ -48,7 +48,7 @@ npm install express --save
 ## 2.
 ### Next, we use express in server.js by requiring it.
 
-The first thing we want to do is to create a server where browsers can connect to. We can do so with the help of a `listen` method provided by Express:
+The first thing we want to do is to create a server where browsers can connect to. We can do so with the help of the `listen` method provided by Express:
 
 
 ```javascript
@@ -58,6 +58,23 @@ var app = express();
 app.listen(3000, function() {
   console.log('listening on 3000')
 })
+```
 
+### Now, run `node server.js` and navigate to `localhost:3000` on your browser. You should see a message that says `“cannot get /“`.
 
-### Now, run `node server.js` and navigate to `localhost:3000` on your browser. You should see a message that says “cannot get /“.
+We can now communicate to our express server through the browser.
+
+## 3.
+---
+
+In Express, we handle a GET request with the get method:
+```javascript
+app.get(path, callback);
+```
+
+### Let’s write “Hello World” back to the browser.
+```javascript
+app.get('/', function(req, res) { //req = request, res = response
+  res.send('Hello World')
+})
+```
