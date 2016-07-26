@@ -58,16 +58,18 @@ var express = require('express');
 var app = express();
 
 app.listen(3000, function() {
-  console.log('listening on 3000')
-})
+  console.log('listening on 3000');
+});
 ```
 
-### Now, run `node server.js` and navigate to `localhost:3000` on your browser. You should see a message that says `“cannot get /“`.
+### Now, run `node server.js` and navigate to `localhost:3000` on your browser.
+
+You should see a message that says `“cannot get /“`.
 
 We can now communicate to our express server through the browser.
 
-## 3.
 ---
+## 3.
 
 In Express, we handle a GET request with the get method:
 ```javascript
@@ -77,6 +79,30 @@ app.get(path, callback);
 ### Let’s write “Hello World” back to the browser.
 ```javascript
 app.get('/', function(req, res) { //req = request, res = response
-  res.send('Hello World')
-})
+  res.send('Hello World');
+});
 ```
+
+### Stop (Ctrl + C) and restart your server. 
+
+You should now see `“Hello World“`.
+---
+
+## 4.
+
+It can get a bit tedious always stopping and restarting your server.
+
+`Nodemon` is a utility that will monitor for any changes in your source and automatically restart your server. Perfect for development. Install it using npm.
+
+### Install `nodemon` globally `npm install -g nodemon`
+
+### Now start your server with `nodemon server.js` and navigate to `localhost:3000` on your browser.
+
+### Change "Hello World" to say "Hello Browser" and refresh the page. 
+
+The changes should be picked up automagically.
+
+---
+
+## 5.
+###
