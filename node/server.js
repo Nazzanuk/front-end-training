@@ -4,18 +4,25 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
 var mongoose = require('mongoose');
+var Pokemon = require('./pokemon');
 
 mongoose.connect('mongodb://nathan:nathan@ds029655.mlab.com:29655/pokemon');
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
+
 db.once('open', () => {
     console.log("we're connected!");
+
+    //var pikachu = new Pokemon({ name: 'Pikachu' });
+    //console.log(pikachu.cp); // 0
+
+    //Pokemon.find().then(response => {
+    //    console.log('Pokemon Array: ', response);
+    //}, console.error);
 });
 
 app.use(bodyParser.urlencoded({extended: true}));
-
-var pokemon = [{name: 'pikachu', cp: 1}];
 
 app.listen(3000, () => console.log('listening on 3000'));
 
@@ -25,11 +32,20 @@ app.get('/', (req, res) => {
 });
 
 app.get('/pokemon', (req, res) => {
-    res.json(pokemon);
+    Pokemon.find().then(response => {
+        res.json(response);
+    }, console.error);
 });
 
 app.post('/pokemon', (req, res) => {
-    res.json(req.body);
-});
+    var pokemon = new Pokemon(req.body);
 
-//mongodb://<dbuser>:<dbpassword>@ds029655.mlab.com:29655/pokemon
+    pokemon.save()
+        .then(() => {
+            return Pokemon.find().then(response => {
+                res.json(response);
+            });
+        }, console.error);
+
+
+});
