@@ -22,7 +22,7 @@ npm install express --save
 
 ### Open your `package.json` and check the file contents. You should see something like this:
 
-```json
+```javascript
 {
   "name": "node",
   "version": "1.0.0",
