@@ -86,8 +86,8 @@ app.get('/', function(req, res) { //req = request, res = response
 ### Stop (Ctrl + C) and restart your server. 
 
 You should now see `“Hello World“`.
----
 
+---
 ## 4.
 
 It can get a bit tedious always stopping and restarting your server.
@@ -103,7 +103,6 @@ It can get a bit tedious always stopping and restarting your server.
 The changes should be picked up automagically.
 
 ---
-
 ## 5.
 ### Create an `index.html` in your root folder
 
