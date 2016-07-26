@@ -4,7 +4,7 @@
 ### Install Mongoose from the command line using npm:
     
 ```bash
-npm install mongoose 
+npm install mongoose --save
 ```
 
 ### Add Mongoose to your project
@@ -36,8 +36,6 @@ db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', () => {
   console.log("we're connected!");
 });
-```
-
 ```
 
 ### Test that this works

@@ -9,8 +9,8 @@ mongoose.connect('mongodb://nathan:nathan@ds029655.mlab.com:29655/pokemon');
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function() {
-    // we're connected!
+db.once('open', () => {
+    console.log("we're connected!");
 });
 
 app.use(bodyParser.urlencoded({extended: true}));
