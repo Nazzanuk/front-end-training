@@ -52,7 +52,9 @@ The first thing we want to do is to create a server where browsers can connect t
 
 
 ```javascript
-//server.jsvar express = require('express');
+//server.js
+
+var express = require('express');
 var app = express();
 
 app.listen(3000, function() {
