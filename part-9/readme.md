@@ -105,4 +105,25 @@ The changes should be picked up automagically.
 ---
 
 ## 5.
-###
+### Create an `index.html` in your root folder
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MY APP</title>
+</head>
+<body>
+    May Node and Express be with you.
+</body>
+</html>
+```
+
+### Update your `server.js` to send this file
+```javascript
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/index.html');
+  // Note: __dirname is the path to your current working directory
+});
+```
