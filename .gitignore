@@ -1,4 +1,7 @@
 .idea
 files
 
+/node
+/node_modules
+/angular
 node/node-modules
